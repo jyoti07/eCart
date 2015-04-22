@@ -40,7 +40,7 @@
 	  
 	  
       <div id="thumbnails">
-        <ul class="clearfix" ng-repeat="c in videos | filter:query | limitTo:12">
+        <ul class="clearfix" ng-repeat="c in videos | limitTo:12 | filter:query ">
           <!-- source: http://dribbble.com/shots/1115721-Turntable -->
           <li>
 		  
