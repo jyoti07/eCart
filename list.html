@@ -1,69 +1,50 @@
-<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
-			<div class="container">
-				<div class="row navbar-fixed-top" style="background-color:TOMATO">
-					<div class="col-sm-6">
-						<div class="contactinfo">
-							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="social-icons pull-right">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header_top-->
-	
-		<div class="header-bottom"><!--header-bottom-->
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-9"></div>
-					<div class="col-sm-4 col-lg-3">
-						<div class="search_box pull-right">
-							<input ng-model="query" type="text" placeholder="Search"/>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!--/header-bottom-->
-	</header><!--/header-->
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Blog-Style Lightbox Gallery - Design Shack Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+  <link rel="icon" href="http://designshack.net/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.lightbox-0.5.css">
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+  
+  <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
 	
 	
-	<div  class="container">
 	
 	
-	<div>
+</head>
 
-		
-						<div class="tab-content" ng-repeat="c in videos | filter:query">
-							<div class="tab-pane fade active in" id="tshirt" >
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<a href="{{c.imglink}}"> <img src="{{c.imglink}}" class="img-responsive" alt="" /></a>
-												<h2>{{c.price}}$</h2>
-												<a href="#/{{c.id}}" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-		
-							
-	</div>		</div>					
-								
-							
-							
-	</div>
+<body>
+  <div id="topbar"><a href="http://designshack.net">Back to Design Shack</a></div>
+  
+  <div id="w">
+    <div id="content">
+      <h1>Images Lightbox Gallery</h1>
+      <p>We are creating a thumbnail blog-style image gallery with the <a href="http://leandrovieira.com/projects/jquery/lightbox/">jQuery lightBox plugin</a> made by Leandro Vieira Pinho. Completely free and open source to use on any project!</p>
+      
+      <div id="thumbnails">
+        <ul class="clearfix">
+          <!-- source: http://dribbble.com/shots/1115721-Turntable -->
+          <li>
+		  
+			<a href="{{c.imglink}}" title="Turntable by Jens Kappelmann"> <img src="{{c.imglink}}" class="img-responsive" alt="turntable" /></a>
+
+		  </li>
+          
+        </ul>
+      </div>
+    </div><!-- @end #content -->
+  </div><!-- @end #w -->
+<script type="text/javascript">
+$(function() {
+    $('#thumbnails a').lightBox();
+});
+</script>
+</body>
+</html>
