@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | E-Shopper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+	
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+	
+	<script>
+	var app = angular.module("HelloApp",['ngRoute'])
+
+	app.config(function($routeProvider) {
+        $routeProvider.
+          when('/', {
+            templateUrl: 'list.html',
+            controller: 'HomeController1'
+          }).
+          when('/cart', {
+            templateUrl: 'cart.html',
+            controller: 'HomeController2'
+          }).
+          otherwise({
+            redirectTo: '/'
+          });
+      });
+
+      app.controller('HomeController1', function ($scope){
+        
+          $scope.videos = 
+		  [
+		{"singer":"OneDirection","imglink":"http://www.mbmusic.it/wp-content/uploads/2012/02/One-Direction-up-all-night-cd-cover.jpg","price":"50"},
+		{"singer":"OneDirection","imglink":"https://fanart.tv/fanart/music/0ab49580-c84f-44d4-875f-d83760ea2cfe/albumcover/call-and-response-the-remix-album-4e4363c396cd6.jpg","price":"45"},
+		{"singer":"Taylor","imglink":"http://www.josepvinaixa.com/blog/wp-content/uploads/2013/07/Taylor-Swift-Red-Single-2012-1200x1200.png","price":"60"},
+		{"singer":"Taylor","imglink":"http://images4.fanpop.com/image/photos/14800000/Fearless-FanMade-Album-Cover-fearless-taylor-swift-album-14878366-500-500.jpg","price":"40"},
+		{"singer":"OneDirection","imglink":"http://www.mbmusic.it/wp-content/uploads/2012/02/One-Direction-up-all-night-cd-cover.jpg","price":"50"},
+		{"singer":"OneDirection","imglink":"https://fanart.tv/fanart/music/0ab49580-c84f-44d4-875f-d83760ea2cfe/albumcover/call-and-response-the-remix-album-4e4363c396cd6.jpg","price":"45"},
+		{"singer":"Taylor","imglink":"http://www.josepvinaixa.com/blog/wp-content/uploads/2013/07/Taylor-Swift-Red-Single-2012-1200x1200.png","price":"60"},
+		{"singer":"Taylor","imglink":"http://images4.fanpop.com/image/photos/14800000/Fearless-FanMade-Album-Cover-fearless-taylor-swift-album-14878366-500-500.jpg","price":"40"}
+];
+        
+      });
+
+	  app.controller('HomeController2', function ($scope,$routeParams){
+        $scope.name = $routeParams.singer;
+      });
+		
+		
+
+
+      
+
+	
+	
+	</script>
+</head><!--/head-->
+
+<body ng-app="HelloApp">
+	<div ng-view></div>
+	
+		
+	
+
+  
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollUp.min.js"></script>
+	<script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
