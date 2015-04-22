@@ -23,6 +23,17 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 	
+	
+	<!-- lightbox-->
+	<link rel="shortcut icon" href="http://designshack.net/favicon.ico">
+  <link rel="icon" href="http://designshack.net/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.lightbox-0.5.css">
+  <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
+	
+	
+	
 	 <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
   <link rel="icon" href="http://designshack.net/favicon.ico">
   <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
@@ -82,11 +93,10 @@
 	<div ng-view></div>
 	
 		<script type="text/javascript">
-$(function() {
-    $('#thumbnails a').lightBox();
-});
-	
-
+			$(function() {
+			$('#thumbnails a').lightBox();
+			});
+		</script>
   
     <script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
