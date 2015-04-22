@@ -155,7 +155,7 @@ a:hover { text-decoration: underline; }
 
 #content {
   display: block;
-  width: 650px;
+  width: 700px;
   background: #fff;
   padding: 5px 0px;
   padding-bottom: 15px;
@@ -165,7 +165,7 @@ a:hover { text-decoration: underline; }
 }
 
 #thumbnails { display: block; margin-bottom: 10px; }
-#thumbnails ul li { float: left; margin-right: 26px; margin-bottom: 12px; }
+#thumbnails ul li { float: left; margin-right: 10px; margin-bottom: 5px; }
 
 /** clearfix **/
 .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
