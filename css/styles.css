@@ -78,6 +78,7 @@ img { border: 0; max-width: 100%; }
   -webkit-transition: height 0.5s linear;
   -moz-transition: height 0.5s linear;
   transition: height 0.5s linear;
+  visibility: hidden;
 }
 #topbar a {
   color: #fff;
