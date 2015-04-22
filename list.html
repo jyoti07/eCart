@@ -29,7 +29,7 @@
       <p>We are creating a thumbnail blog-style image gallery with the <a href="http://leandrovieira.com/projects/jquery/lightbox/">jQuery lightBox plugin</a> made by Leandro Vieira Pinho. Completely free and open source to use on any project!</p>
       
       <div id="thumbnails">
-        <ul class="clearfix">
+        <ul class="clearfix" ng-repeat="c in videos | filter:query">
           <!-- source: http://dribbble.com/shots/1115721-Turntable -->
           <li>
 		  
