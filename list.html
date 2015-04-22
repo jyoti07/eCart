@@ -24,10 +24,24 @@
   <div id="topbar"><a href="http://designshack.net">Back to Design Shack</a></div>
   
   <div id="w">
-    <div id="content">
+    <div id="container">
       <h1>Images Lightbox Gallery</h1>
       <p>We are creating a thumbnail blog-style image gallery with the <a href="http://leandrovieira.com/projects/jquery/lightbox/">jQuery lightBox plugin</a> made by Leandro Vieira Pinho. Completely free and open source to use on any project!</p>
       
+	  <div class="header-bottom"><!--header-bottom-->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9"></div>
+					<div class="col-sm-4 col-lg-3">
+						<div class="search_box pull-right">
+							<input ng-model="query" type="text" placeholder="Search"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  
+	  
       <div id="thumbnails">
         <ul class="clearfix" ng-repeat="c in videos | filter:query">
           <!-- source: http://dribbble.com/shots/1115721-Turntable -->
