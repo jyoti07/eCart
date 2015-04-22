@@ -71,6 +71,7 @@ img { border: 0; max-width: 100%; }
   text-align: center;
   height: 36px;
   overflow: hidden;
+  color:white;
   -webkit-transition: height 0.5s linear;
   -moz-transition: height 0.5s linear;
   transition: height 0.5s linear;
