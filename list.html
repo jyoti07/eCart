@@ -24,21 +24,22 @@
     <div id="content">
       <h1>Keyhigh Music Gallery</h1>
 	  <div class="header-bottom"><!--header-bottom-->
-			
+			<div id="content">
 				<div class="row">
-					<div class="col-lg-9" style="font-size:1.17em"></div>
+					<div class="col-lg-9" style="font-size:1.17em">
+					</div>
 					<div class="col-sm-4 col-lg-3">
 						<div class="search_box pull-right">
 							<input ng-model="query" type="text" placeholder="Search"/>
 						</div>
 					</div>
 				</div>
-			
+			</div>
 		</div>
 	  
 	  
       <div id="thumbnails">
-        <ul class="clearfix" ng-repeat="c in videos | limitTo:12 | filter:query ">
+        <ul class="clearfix" ng-repeat="c in videos | filter:query ">
           <!-- source: http://dribbble.com/shots/1115721-Turntable -->
           <li>
 		  
