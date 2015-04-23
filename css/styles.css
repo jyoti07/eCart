@@ -21,6 +21,7 @@ body {
   font-size: 62.5%; 
   line-height: 1; 
   background-image: url("http://limogesdesign.com/wp-content/uploads/2014/08/colorful-music-notes-wallpaper.jpg");
+  overflow: scroll;
 }
 
 ::selection { background: #a4dcec; }
